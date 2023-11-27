@@ -30,8 +30,18 @@ function playRound(playerSelection, computerSelection) {
         }
 }
 
+function getPlayerSelection() {
+    //create 'valid' and assign it 'false' boolean
+    //loop
+        //get playerselection
+        //normalize the selection
+        //validate the selection
+        //run again if the selection is invalid
+    //return selection
+}
+
 function game() {
-    //get user input
+    //get player input
     //play five rounds
         //output message for each round
     //output overall winner
