@@ -54,8 +54,27 @@ function getPlayerSelection() {
 }
 
 function game() {
-    //get player input
+    let totalPlayerWins = 0;
+    let totalComputerWins = 0;
     //play five rounds
-        //output message for each round
-    //output overall winner
+    for (let i = 0; i < 5; i++) {
+        let playerSelection = getPlayerSelection();
+        let computerSelection = getComputerChoice();
+        let roundResult = playRound(playerSelection, computerSelection);
+
+        //output result for each round and update scores
+        console.log(roundResult);
+        if (roundResult.toLowerCase().includes("won"))
+            totalPlayerWins++;
+        else if(roundResult.toLowerCase().includes("lost"))
+            totalComputerWins++
+    }
+      
+    console.log("And the final result is...\n")
+    if (totalPlayerWins > totalComputerWins)
+        console.log("You won!")
+    else if (totalPlayerWins < totalComputerWins)
+        console.log("You lost...")
+    else
+        console.log("It's a tie!")
 }
