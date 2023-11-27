@@ -32,12 +32,25 @@ function playRound(playerSelection, computerSelection) {
 
 function getPlayerSelection() {
     //create 'valid' and assign it 'false' boolean
-    //loop
-        //get playerselection
-        //normalize the selection
+    let isValid = false;
+    let playerSelection;
+
+    while (!isValid) {
+        //get playerselection and normalize it
+        playerSelection = prompt("Type rock, paper, or scissors: ");
+        playerSelection = playerSelection.toLowerCase();
+
         //validate the selection
-        //run again if the selection is invalid
+        if (playerSelection === "rock" || playerSelection === "paper" || playerSelection ==="scissors") {
+            isValid = true;
+        }
+        
+        if (!isValid)
+            alert("Invalid selection \nMust be rock, paper, or scissors");        
+    }
+        
     //return selection
+    return playerSelection;
 }
 
 function game() {
