@@ -1,4 +1,4 @@
-function getComputerChoice() {
+function getComputerSelection() {
     //get random number
     let randNum = Math.random();
     randNum = (randNum * 10) % 3;
@@ -59,7 +59,7 @@ function game() {
     //play five rounds
     for (let i = 0; i < 5; i++) {
         let playerSelection = getPlayerSelection();
-        let computerSelection = getComputerChoice();
+        let computerSelection = getComputerSelection();
         let roundResult = playRound(playerSelection, computerSelection);
 
         //output result for each round and update scores
